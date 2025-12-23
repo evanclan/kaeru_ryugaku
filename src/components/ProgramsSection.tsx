@@ -234,14 +234,18 @@ export default function ProgramsSection() {
                     ))}
                 </motion.div>
 
-                {/* Mobile: Stacked cards with featured emphasized */}
-                <div className="md:hidden space-y-3">
+                {/* Mobile: Stacked cards with scroll animations */}
+                <motion.div
+                    variants={staggerContainerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-30px" }}
+                    className="md:hidden space-y-3"
+                >
                     {/* Featured Program Card */}
                     {featuredProgram && (
                         <motion.div
-                            initial={{ opacity: 0, y: 10 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            variants={cardRevealVariants}
                         >
                             <div className={`rounded-xl p-4 text-white relative overflow-hidden`}>
                                 {/* Background Image */}
@@ -278,15 +282,15 @@ export default function ProgramsSection() {
                         </motion.div>
                     )}
 
-                    {/* Other Programs - Compact grid */}
-                    <div className="grid grid-cols-2 gap-2">
+                    {/* Other Programs - Compact grid with stagger */}
+                    <motion.div
+                        variants={staggerContainerVariants}
+                        className="grid grid-cols-2 gap-2"
+                    >
                         {otherPrograms.map((program, index) => (
                             <motion.div
                                 key={program.id}
-                                initial={{ opacity: 0, y: 10 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: index * 0.05 }}
+                                variants={cardRevealVariants}
                             >
                                 <div className={`rounded-lg p-3 h-full relative overflow-hidden ${program.image ? '' : 'bg-slate-50 border border-slate-100'}`}>
                                     {program.image && (
@@ -310,8 +314,8 @@ export default function ProgramsSection() {
                                 </div>
                             </motion.div>
                         ))}
-                    </div>
-                </div>
+                    </motion.div>
+                </motion.div>
             </div>
         </section >
     );

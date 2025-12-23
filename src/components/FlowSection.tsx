@@ -159,21 +159,30 @@ function StepBubble({ step, index }: { step: typeof steps[0]; index: number }) {
     );
 }
 
-// Mobile step card with tap animation
+// Mobile step card with enhanced scroll animation
 function MobileStepCard({ step, index }: { step: typeof steps[0]; index: number }) {
     const Icon = step.icon;
 
     return (
         <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: index * 0.08 }}
+            initial={{ opacity: 0, x: 40, scale: 0.9 }}
+            whileInView={{ opacity: 1, x: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-20px" }}
+            transition={{
+                delay: index * 0.1,
+                type: "spring",
+                stiffness: 300,
+                damping: 20
+            }}
             whileTap={{ scale: 0.95 }}
             className="flex-shrink-0 flex items-center gap-3 bg-gradient-to-r from-slate-50 to-emerald-50/50 rounded-xl px-4 py-3 shadow-sm border border-emerald-100/50 active:bg-emerald-50"
         >
             <motion.div
                 className="w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-full flex items-center justify-center shadow-md"
+                initial={{ rotate: -20 }}
+                whileInView={{ rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1 + 0.2, type: "spring" }}
                 whileTap={{ rotate: 10 }}
             >
                 <Icon className="w-5 h-5 text-white" />
@@ -318,28 +327,31 @@ export default function FlowSection() {
                         </motion.div>
                     </div>
 
-                    {/* Mobile: Enhanced horizontal scroll */}
-                    <div className="md:hidden flex gap-3 overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide items-center">
+                    {/* Mobile: Enhanced horizontal scroll with scroll animation */}
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true, margin: "-30px" }}
+                        className="md:hidden flex gap-3 overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide items-center"
+                    >
                         {steps.map((step, index) => (
                             <MobileStepCard key={step.number} step={step} index={index} />
                         ))}
 
-                        {/* Happy Frog - Mobile with bounce */}
+                        {/* Happy Frog - Mobile with bounce-in animation */}
                         <motion.img
                             src="/frog-mascot-happy.png"
                             alt="かえるマスコット"
                             className="flex-shrink-0 w-14 h-14 object-contain"
+                            initial={{ opacity: 0, scale: 0, rotate: -20 }}
+                            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.6, type: "spring", stiffness: 300 }}
                             animate={{
                                 y: [0, -3, 0],
-                                scale: [1, 1.05, 1]
-                            }}
-                            transition={{
-                                duration: 1.5,
-                                repeat: Infinity,
-                                ease: "easeInOut"
                             }}
                         />
-                    </div>
+                    </motion.div>
                 </motion.div>
             </div>
         </section>
