@@ -109,10 +109,12 @@ export default function Hero() {
 
                         {/* CTA Buttons - Inline */}
                         <div className="flex flex-wrap gap-3 mt-18">
-                            <Button size="lg" className="group shadow-md shadow-amber-500/30 text-sm h-10">
-                                まずは無料相談
-                                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                            </Button>
+                            <a href="https://form.kaeruryugaku.com/" target="_blank" rel="noopener noreferrer">
+                                <Button size="lg" className="group shadow-md shadow-amber-500/30 text-sm h-10">
+                                    まずは無料相談
+                                    <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                                </Button>
+                            </a>
                             <Button variant="outline" size="lg" className="group text-sm h-10 bg-white/10 backdrop-blur-sm border-white/30 text-white hover:bg-white/20">
                                 <MessageCircle className="w-4 h-4 text-emerald-400" />
                                 LINEで質問

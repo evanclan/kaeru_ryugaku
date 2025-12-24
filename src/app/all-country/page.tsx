@@ -113,7 +113,9 @@ export default function AllCountryPage() {
                             無料カウンセリングで、あなたの目的や予算に合った国をご提案します。
                         </p>
                         <Link
-                            href="#"
+                            href="https://form.kaeruryugaku.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors"
                         >
                             無料カウンセリング予約

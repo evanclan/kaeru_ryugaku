@@ -179,7 +179,9 @@ export default function AllPlanPage() {
                             あなたの目的、予算、期間に合わせて、最適なプランをご提案します。
                         </p>
                         <Link
-                            href="#"
+                            href="https://form.kaeruryugaku.com/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors"
                         >
                             無料カウンセリング予約

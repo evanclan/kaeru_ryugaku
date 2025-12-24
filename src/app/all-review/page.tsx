@@ -248,9 +248,11 @@ export default function AllReviewPage() {
                         <p className="text-slate-600 mb-8">
                             まずは無料カウンセリングで、あなたに合った留学プランをご相談ください。
                         </p>
-                        <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
-                            無料カウンセリング予約
-                        </Button>
+                        <a href="https://form.kaeruryugaku.com/" target="_blank" rel="noopener noreferrer">
+                            <Button size="lg" className="bg-emerald-600 hover:bg-emerald-700">
+                                無料カウンセリング予約
+                            </Button>
+                        </a>
                     </motion.div>
                 </div>
             </section>

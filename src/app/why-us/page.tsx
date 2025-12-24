@@ -180,10 +180,12 @@ export default function WhyUsPage() {
                             経験豊富なカウンセラーが、あなたに最適なプランをご提案します。
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" variant="secondary" className="bg-white text-emerald-700 hover:bg-emerald-50">
-                                無料カウンセリング予約
-                                <ArrowRight className="w-5 h-5 ml-2" />
-                            </Button>
+                            <a href="https://form.kaeruryugaku.com/" target="_blank" rel="noopener noreferrer">
+                                <Button size="lg" variant="secondary" className="bg-white text-emerald-700 hover:bg-emerald-50">
+                                    無料カウンセリング予約
+                                    <ArrowRight className="w-5 h-5 ml-2" />
+                                </Button>
+                            </a>
                             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
                                 資料請求
                             </Button>

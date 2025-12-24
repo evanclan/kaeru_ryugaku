@@ -296,9 +296,11 @@ export default function AboutPage() {
                                 <Mail className="w-5 h-5 mr-2" />
                                 お問い合わせ
                             </Button>
-                            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                                無料カウンセリング予約
-                            </Button>
+                            <a href="https://form.kaeruryugaku.com/" target="_blank" rel="noopener noreferrer">
+                                <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                                    無料カウンセリング予約
+                                </Button>
+                            </a>
                         </div>
                     </motion.div>
                 </div>

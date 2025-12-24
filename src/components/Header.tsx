@@ -187,9 +187,11 @@ export default function Header() {
                             <Button variant="outline" size="default">
                                 資料請求
                             </Button>
-                            <Button variant="default" size="default">
-                                無料カウンセリング予約
-                            </Button>
+                            <a href="https://form.kaeruryugaku.com/" target="_blank" rel="noopener noreferrer">
+                                <Button variant="default" size="default">
+                                    無料カウンセリング予約
+                                </Button>
+                            </a>
                         </div>
 
                         {/* Mobile Menu Button */}
@@ -293,9 +295,11 @@ export default function Header() {
                                     <Button variant="outline" className="w-full">
                                         資料請求
                                     </Button>
-                                    <Button variant="default" className="w-full">
-                                        無料カウンセリング予約
-                                    </Button>
+                                    <a href="https://form.kaeruryugaku.com/" target="_blank" rel="noopener noreferrer">
+                                        <Button variant="default" className="w-full">
+                                            無料カウンセリング予約
+                                        </Button>
+                                    </a>
                                 </div>
                             </div>
                         </motion.nav>

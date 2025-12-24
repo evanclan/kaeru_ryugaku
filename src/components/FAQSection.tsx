@@ -138,10 +138,12 @@ export default function FAQSection() {
                     viewport={{ once: true, margin: "-30px" }}
                     className="mt-6 text-center"
                 >
-                    <Button size="default" className="group text-sm h-9">
-                        無料相談で質問する
-                        <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                    </Button>
+                    <a href="https://form.kaeruryugaku.com/" target="_blank" rel="noopener noreferrer">
+                        <Button size="default" className="group text-sm h-9">
+                            無料相談で質問する
+                            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                        </Button>
+                    </a>
                 </motion.div>
             </div>
         </section>
