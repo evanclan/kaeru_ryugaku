@@ -343,13 +343,10 @@ export default function FlowSection() {
                             src="/frog-mascot-happy.png"
                             alt="かえるマスコット"
                             className="flex-shrink-0 w-14 h-14 object-contain"
-                            initial={{ opacity: 0, scale: 0, rotate: -20 }}
-                            whileInView={{ opacity: 1, scale: 1, rotate: 0 }}
+                            initial={{ opacity: 0, scale: 0 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.6, type: "spring", stiffness: 300 }}
-                            animate={{
-                                y: [0, -3, 0],
-                            }}
                         />
                     </motion.div>
                 </motion.div>
