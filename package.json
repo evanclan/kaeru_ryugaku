@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "optimize": "node scripts/optimize-images.js",
+    "optimize:watch": "node scripts/optimize-images-watch.js"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
@@ -34,6 +36,8 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
+    "glob": "^13.0.0",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
