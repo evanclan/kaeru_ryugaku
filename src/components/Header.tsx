@@ -32,7 +32,7 @@ const socialLinks = [
 // Navigation structure with dropdowns
 const navItems = [
     { label: "選ばれる理由", href: "/why-us" },
-    { label: "お客様の声", href: "/all-review" },
+    { label: "お客様の声", href: "/all-reviews" },
     {
         label: "留学国一覧",
         href: "/all-country",

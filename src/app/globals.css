@@ -155,3 +155,78 @@ a:focus-visible {
 .delay-500 {
   animation-delay: 500ms;
 }
+
+/* Background Animations */
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Grid Pattern */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(5, 150, 105, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(5, 150, 105, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Destination Explorer - Orbit ring rotation */
+@keyframes orbitRing {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.destination-orbit-ring {
+  transform-origin: center center;
+  animation: orbitRing 20s linear infinite;
+}
+
+/* Destination Explorer - Orbit: container spins clockwise, items counter-spin to stay upright */
+@keyframes orbitCW {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes orbitCCW {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+
+.destination-orbit {
+  transform-origin: center center;
+  animation: orbitCW 60s linear infinite;
+}
+
+.destination-orbit-item {
+  transform-origin: center center;
+  animation: orbitCCW 60s linear infinite;
+}
